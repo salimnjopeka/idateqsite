@@ -1,0 +1,110 @@
+{% load static %}
+<nav class="bg-white">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 h-20">
+        <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button data-collapse-toggle="navbar-dropdown" type="button"
+                    class="inline-flex items-center justify-center rounded-md p-2 text-blue-800 hover:bg-blue-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white mt-5"
+                    aria-controls="navbar-dropdown" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+              Icon when menu is closed.
+  
+              Heroicon name: outline/bars-3
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x-mark
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex flex-shrink-0 items-center">
+                    <img src="{% static 'images/idalogo1.jpg' %}" class="block w-60 mt-4" alt="...">
+                </div>
+
+                <div class="hidden sm:ml-auto sm:block mt-7">
+                    <div class="flex space-x-4">
+                        <a href="{% url 'home' %}" class="text-blue-800 hover:text-blue-700 py-2 font-medium"
+                            aria-current="page">Home</a>
+
+                        <a href="{% url 'services' %}" class="text-blue-800 hover:text-blue-700 py-2 font-medium">IT
+                            Services</a>
+
+                        {% comment %} <a href="#"
+                            class="text-blue-800 hover:text-blue-700 py-2 font-medium">Programs</a> {% endcomment %}
+
+                        <div class="dropdown">
+                            <button
+                                class="dropbtn text-blue-800 hover:text-blue-700 py-2 font-medium inline-flex items-center">Programs
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20">
+                                    <path
+                                        d="M9.293 12.95I.707.707L15.657 8I-1.414-1.4414L10 10.828 5.757 6.586 4.343 8z" />
+                                </svg>
+                            </button>
+                            <div class="dropdown-content bg-white">
+                                <a href="{% url 'girls' %}"
+                                    class="text-blue-800 hover:text-blue-700 font-medium hover:bg-indigo-50">Girls In
+                                    Code</a>
+                                <a href="{% url 'junior' %}"
+                                    class="text-blue-800 hover:text-blue-700 font-medium hover:bg-indigo-50">Junior
+                                    Programmers</a>
+                                <a href="#"
+                                    class="text-blue-800 hover:text-blue-700 font-medium hover:bg-indigo-50">AIPE</a>
+                                <a href="#"
+                                    class="text-blue-800 hover:text-blue-700 font-medium hover:bg-indigo-50">SCPIOT</a>
+                            </div>
+                        </div>
+
+                        <a href="project"
+                            class="text-blue-800 hover:text-blue-700 py-2 font-medium">Projects</a>
+
+                        <a href="{% url 'contact' %}"
+                            class="text-blue-800 hover:text-blue-700 pr-8 py-2 font-medium">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="hidden" id="navbar-dropdown">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+            <a href="{% url 'home' %}"
+                class="text-blue-800 hover:text-blue-700 text-center block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page">Home</a>
+
+            <a href="{% url 'services' %}"
+                class="text-blue-800 hover:text-blue-700 text-center block px-3 py-2 rounded-md text-base font-medium">IT
+                Services</a>
+
+            <a href="#"
+                class="text-blue-800 hover:text-blue-700 text-center block px-3 py-2 rounded-md text-base font-medium">Programs</a>
+
+            <a href="#"
+                class="text-blue-800 hover:text-blue-700 text-center block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+
+            <a href="{% url 'contact' %}"
+                class="text-blue-800 hover:text-blue-700 text-center block px-3 py-2 rounded-md text-base font-medium">Contact
+                US</a>
+        </div>
+    </div>
+</nav>

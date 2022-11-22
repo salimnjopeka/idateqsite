@@ -1,0 +1,40 @@
+{% extends 'idateq/layouts/main.html' %}
+{% block title %}Contact us{% endblock title %}
+{% block content %}
+
+<div class="bg-[url('static/images/contactback.jpg')] bg-cover">
+
+    <div class="px-20 py-20">
+        <div class="block p-7 bg-white max-w-sm " style="box-shadow: 0px 1px 100px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;">
+        
+            <form method="POST" action="">
+            {% csrf_token %}
+                <h1 class="text-4xl text-center font-bold text-blue-800 mb-10">CONTACT US</h1>
+                <div class="form-group mb-6">
+                    <label for="email" class="form-label inline-block mb-2 text-black">Email
+                        address</label>
+                    <input type="email" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="email"
+                        name="Email" aria-describedby="emailHelp" placeholder="Enter your email">
+                </div>
+                <div class="form-group mb-6">
+                    <label for="phone" class="form-label inline-block mb-2 text-black">Phone Number</label>
+                    <input type="number" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="phone"
+                         name="Phone" placeholder="Enter your number">
+                </div>
+                <div class="form-group mb-6">
+                    <label for="message" class="form-label inline-block mb-2 text-black">Message</label>
+                    <textarea  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="message" rows="4"
+                        name="Message" placeholder="Write your message here"></textarea>
+                </div>
+                <div class="text-center">
+                <button type="submit" class="px-4 py-2 bg-blue-800 text-white font-bold text-xl leading-tight uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out "
+            style="border-radius: 10px 0px;" value="POST">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
