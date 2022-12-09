@@ -18,7 +18,7 @@ class Courses(models.Model):
         return self.CourseName
 
 class Applicant(models.Model):
-    courses = models.ForeignKey(Courses, on_delete=models.CASCADE)
+    courses = models.ForeignKey(Courses, on_delete=models.CASCADE, null=False)
     Fname = models.CharField(max_length=20)
     Lname = models.CharField(max_length=20)
     genderOptions = [

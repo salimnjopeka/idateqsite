@@ -5,85 +5,93 @@
 <div class="bg-[url('static/images/applyback.jpg')] bg-cover">
 
     <div class="px-20 sm:pl-[700px] py-20">
-        <div class="block p-7 bg-white" style="box-shadow: 0px 1px 100px 1px rgba(0, 0, 0, 0.1);
+        <div class="animate__animated animate__fadeInRight block p-7 bg-white" style="box-shadow: 0px 1px 100px 1px rgba(0, 0, 0, 0.1);
         border-radius: 20px;">
-        
+
             <form method="POST" action="">
-            {% csrf_token %}
+                {% csrf_token %}
                 <h1 class="text-4xl text-center font-bold text-blue-800 mb-10">APPLICATION FORM</h1>
                 <div class="form-group mb-6">
                     <label for="FirstName" class="form-label inline-block mb-2 text-black">First Name</label>
-                    <input type="String" name="Fname" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="email"
-                         placeholder="Enter your first name">
+                    <input type="String" name="Fname"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="email" placeholder="Enter your first name">
                 </div>
                 <div class="form-group mb-6">
                     <label for="LastName" class="form-label inline-block mb-2 text-black">Last Name</label>
-                    <input type="String" name="Lname" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="email"
-                         placeholder="Enter your last name">
+                    <input type="String" name="Lname"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="email" placeholder="Enter your last name">
                 </div>
                 <div class="form-group mb-6">
                     <label for="gender" class="form-label inline-block mb-2 text-black">Gender</label>
                     <div class="flex justify-start sm:pl-2">
                         <div class="form-check form-check-inline">
-                          <input name="Gender" class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-800 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                          <label class="form-check-label inline-block text-gray-800" for="inlineRadio10">Male</label>
+                            <input name="Gender"
+                                class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-800 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Male" />
+                            <label class="form-check-label inline-block text-gray-800" for="inlineRadio10">Male</label>
                         </div>
                         <div class="form-check form-check-inline pl-10 sm:pl-30">
-                          <input name="Gender" class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-800 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                          <label class="form-check-label inline-block text-gray-800" for="inlineRadio20">Female</label>
+                            <input name="Gender"
+                                class="form-check-input form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-800 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Female" />
+                            <label class="form-check-label inline-block text-gray-800"
+                                for="inlineRadio20">Female</label>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 <div class="form-group mb-6">
                     <label for="address" class="form-label inline-block mb-2 text-black">Address</label>
-                    <textarea name="Address" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="adress" rows="1"
-                         placeholder="Enter your address"></textarea>
+                    <textarea name="Address"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="adress" rows="1" placeholder="Enter your address"></textarea>
                 </div>
                 <div class="form-group mb-6">
                     <label for="email" class="form-label inline-block mb-2 text-black">Email</label>
-                    <input type="email" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="email"
-                        name="Email" aria-describedby="emailHelp" placeholder="Enter your email">
+                    <input type="email"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="email" name="Email" aria-describedby="emailHelp" placeholder="Enter your email">
                 </div>
                 <div class="form-group mb-6">
                     <label for="phone" class="form-label inline-block mb-2 text-black">Phone Number</label>
-                    <input type="number" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="phone"
-                        name="Contact" placeholder="Enter your number">
+                    <input type="number"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="phone" name="Contact" placeholder="Enter your number">
                 </div>
                 <div class="form-group mb-6">
                     <label for="section" class="form-label inline-block mb-2 text-black">Field of Education</label>
-                    <input type="String" name="Section" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="phone"
-                         placeholder="Enter your field of education">
+                    <input type="String" name="Section"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="phone" placeholder="Enter your field of education">
                 </div>
                 <div class="form-group mb-6">
                     <label for="level" class="form-label inline-block mb-2 text-black">Level of Education</label>
-                    <input type="String" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="phone"
-                        name="Level" placeholder="Enter your level of education">
+                    <input type="String"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="phone" name="Level" placeholder="Enter your level of education">
                 </div>
                 <div class="form-group mb-6">
                     <label for="school" class="form-label inline-block mb-2 text-black">School Name</label>
-                    <input type="String" class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="phone"
-                        name="School" placeholder="Enter your school name">
-                </div>
-                <div class="form-group mb-6">
-                    <label for="course" class="form-label inline-block mb-2 text-black">What you like to be trained in</label>
-                    <textarea  class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="adress" rows="1"
-                        name="courses" placeholder="Write what you like to be trained in"></textarea>
+                    <input type="String"
+                        class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="phone" name="School" placeholder="Enter your school name">
                 </div>
 
                 <div>
-                    <select name="dropdown">
-    <option selected="selected" disabled>What you like to be trained in:</option>
-    <option value="10">10</option>
-    <option value="20">20</option>
-    <option value="30">30</option>
-    <option value="40">40</option>
-    <option value="50">50</option>
-</select>
+                <label for="courses" class="form-label inline-block mb-2 text-black">What you like to be trained in:</label>
+                    <select name="courses">
+                        <option selected="selected" disabled>Choose your course</option>
+                        {% for co in course %}
+                        <option value="{{co.CourseName}}">{{co.CourseName}}</option>
+                        {% endfor %}
+                    </select>
                 </div>
 
                 <div class="text-center">
-                <button type="submit" class="px-4 py-2 bg-blue-800 text-white font-bold text-xl leading-tight uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out "
-            value="POST" style="border-radius: 10px;">Submit</button>
+                    <button type="submit"
+                        class="hover:animate-pulse px-4 py-2 bg-blue-800 text-white font-bold text-xl leading-tight uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out "
+                        style="border-radius: 10px 0px;" value="POST">Submit</button>
                 </div>
             </form>
         </div>
