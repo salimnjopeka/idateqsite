@@ -1,1 +1,1 @@
-web gunicorn idateq.wsgi:application --log-file -
+web gunicorn teq.wsgi --log-file -
