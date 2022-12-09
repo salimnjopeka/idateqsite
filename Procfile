@@ -1,1 +1,1 @@
-web gunicorn teq.wsgi --log-file -
+web gunicorn ida.wsgi --log-file -
